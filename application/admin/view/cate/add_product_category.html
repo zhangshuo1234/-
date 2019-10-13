@@ -12,7 +12,7 @@
 {include file="public/header"}
 <!-- dcHead 结束 --> <div id="dcLeft"><div id="menu">
  <ul class="top">
-  <li><a href="index.html"><i class="home"></i><em>管理首页</em></a></li>
+  <li><a href="../index/index.html"><i class="home"></i><em>管理首页</em></a></li>
  </ul>
  <ul>
   <li><a href="system.html"><i class="system"></i><em>系统设置</em></a></li>
@@ -40,7 +40,7 @@
    <!-- 当前位置 -->
 <div id="urHere">DouPHP 管理中心<b>></b><strong>添加分类</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
             <h3><a href="product_category" class="actionBtn">商品分类</a>添加分类</h3>
-    <form action="product_category" method="post">
+    <form action="add_product_category" method="post">
      <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
       <tr>
        <td width="80" align="right">分类名称</td>
@@ -51,13 +51,13 @@
       <tr>
        <td align="right">别名</td>
        <td>
-        <input type="text" name="unique_id" value="" size="40" class="inpMain" />
+        <input type="text" name="cate_intro" value="" size="40" class="inpMain" />
        </td>
       </tr>
       <tr>
        <td align="right">上级分类</td>
        <td>
-        <select name="parent_id">
+        <select name="cate_pid">
          <option value="0">无</option>
                            <option value="1"> 电子数码</option>
                                     <option value="4">- 智能手机</option>
@@ -70,19 +70,19 @@
       <tr>
        <td align="right">关键字</td>
        <td>
-        <input type="text" name="keywords" value="" size="40" class="inpMain" />
+        <input type="text" name="cate_keyword" value="" size="40" class="inpMain" />
        </td>
       </tr>
       <tr>
        <td align="right">简单描述</td>
        <td>
-        <textarea name="description" cols="60" rows="4" class="textArea"></textarea>
+        <textarea name="cate_desc" cols="60" rows="4" class="textArea"></textarea>
        </td>
       </tr>
       <tr>
        <td align="right">排序</td>
        <td>
-        <input type="text" name="sort" value="50" size="5" class="inpMain" />
+        <input type="text" name="cate_order" value="50" size="5" class="inpMain" />
        </td>
       </tr>
       <tr>
