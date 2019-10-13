@@ -59,12 +59,10 @@
        <td>
         <select name="cate_pid">
          <option value="0">无</option>
-                           <option value="1"> 电子数码</option>
-                                    <option value="4">- 智能手机</option>
-                                    <option value="5">- 平板电脑</option>
-                                    <option value="2"> 家居百货</option>
-                                    <option value="3"> 母婴用品</option>
-                          </select>
+           {foreach $cates as $list}
+                 <option value="{$list.cate_pid}">{$list.cate_name}</option>
+           {/foreach}
+        </select>
        </td>
       </tr>
       <tr>

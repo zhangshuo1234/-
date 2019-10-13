@@ -51,14 +51,15 @@
        <th width="60" align="center">排序</th>
         <th width="80" align="center">操作</th>
      </tr>
+        {foreach $cates as $vo}
             <tr>
-        <td align="left"> <a href="product.php?cat_id=1">电子数码</a></td>
-        <td>digital</td>
-        <td>电子产品销售</td>
-        <td align="center">10</td>
+        <td align="left"> <a href="product.php?cat_id=1">{$vo.cate_name}</a></td>
+        <td>{$vo.cate_intro}</td>
+        <td>{$vo.cate_desc}</td>
+        <td align="center">{$vo.cate_order}</td>
         <td align="center"><a href="product_category.php?rec=edit&cat_id=1">编辑</a> | <a href="product_category.php?rec=del&cat_id=1">删除</a></td>
      </tr>
-
+        {/foreach}
           </table>
            </div>
  </div>
