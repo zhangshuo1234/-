@@ -4,9 +4,8 @@ use think\Db;
 use think\Model;
 class CateModel extends Model{
     public function cate_pid(){
-         $cates=Db::name('cate')->select();
+        $cates=self::name('cate')->select();
         return $this->cateByRecursion($cates);
-
     }
     public function cateByRecursion($cate,$pid=0,$level=0){
         $orderCate=[];

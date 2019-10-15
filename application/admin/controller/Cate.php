@@ -6,7 +6,6 @@ use think\Db;
 
 class Cate extends Controller
 {
-
     public function product_category(){
             $cates=Db::name('cate')->select();
             return view('',['cates'=>$cates]);

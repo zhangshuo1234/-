@@ -6,4 +6,7 @@ class Manager extends Controller{
 
           return view();
     }
+    public function addmanager(){
+          return view();
+    }
 }
