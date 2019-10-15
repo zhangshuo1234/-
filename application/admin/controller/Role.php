@@ -1,6 +1,7 @@
 <?php
 namespace app\admin\controller;
-use app\admin\model\RoleModel;
+
+
 use think\Controller;
 
 class Role extends Controller{
@@ -19,7 +20,7 @@ class Role extends Controller{
                 'role_name'=>$role_name,
                 'role_desc'=>$role_desc
             ];
-            $role=new RoleModel();
+            $role=new \app\admin\model\Role();
             if($role->roleadd($data)){
                 $this->success("添加角色成功");
             }else{

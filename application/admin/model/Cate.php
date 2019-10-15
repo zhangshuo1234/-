@@ -2,7 +2,7 @@
 namespace app\admin\model;
 use think\Db;
 use think\Model;
-class CateModel extends Model{
+class Cate extends Model{
     public function cate_pid(){
         $cates=self::name('cate')->select();
         return $this->cateByRecursion($cates);

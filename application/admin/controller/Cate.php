@@ -1,6 +1,6 @@
 <?php
 namespace app\admin\controller;
-use app\admin\model\CateModel;
+
 use think\Controller;
 use think\Db;
 
@@ -13,7 +13,7 @@ class Cate extends Controller
     public function add_product_category(){
         if(request()->isGet()){
             //调用模型层取得所有分类
-            $cate=new CateModel();
+            $cate=new \app\admin\model\Cate();
             $cates=$cate->cate_pid();
             return view('',['cates'=>$cates]);
         }
