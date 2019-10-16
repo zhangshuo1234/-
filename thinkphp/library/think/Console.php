@@ -42,6 +42,7 @@ class Console
         'make:command'      => "think\\console\\command\\make\\Command",
         'make:controller'   => "think\\console\\command\\make\\Controller",
         'make:model'        => "think\\console\\command\\make\\Model",
+        'make:service'      => "think\\console\\command\\make\\Service", //新加的一个层
         'make:middleware'   => "think\\console\\command\\make\\Middleware",
         'make:validate'     => "think\\console\\command\\make\\Validate",
         'optimize:autoload' => "think\\console\\command\\optimize\\Autoload",
