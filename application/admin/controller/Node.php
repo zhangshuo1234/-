@@ -1,6 +1,7 @@
 <?php
 
 namespace app\admin\controller;
+use app\admin\service\NodeService;
 use think\Request;
 class Node extends Common
 {
@@ -18,15 +19,17 @@ class Node extends Common
     public function addnode()
     {
         if(request()->isGet()){
-            $data=\app\admin\model\Node::all()->toArray();
-            return view('',['node_cate'=>$data]);
+            $node_three=new \app\admin\model\Node();
+            $node_four =new NodeService();
+            $NodeOrder=$node_four->getNodeOrder($node_three->all());
+            return view('',['NodeOrder'=>$NodeOrder]);
         }
         if(request()->isPost()){
             $data=input("post.",'');
             $node_two=new \app\admin\model\Node();
-            $node_two->save($data);
+            $node_two->allowField(true)->save($data);
             if($node_two){
-                $this->success("权限添加成功","add");
+                $this->success("权限添加成功","addnode");
             }else{
                 $this->error("添加失败");
             }
